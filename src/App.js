@@ -9,21 +9,21 @@ const App = () => {
     <>
       <Header title="Pokemon Card Game" desc="Enjoy!" />
       <Layout
-        id="1"
+        id="FirstScreen"
         title="New impression"
-        desc="You like it!"
+        desc="TL;DR!"
         urlBg={layoutBg1}
       />
       <Layout
-        id="2"
+        id="SecondScreen"
         title="New experience"
         desc="You like it!"
         colorBg="#f300b4"
       />
       <Layout
-        id="3"
+        id="ThirdScreen"
         title="New copabilities"
-        desc="You like it!"
+        desc="Play now!"
         urlBg={layoutBg3}
       />
       <Footer />
