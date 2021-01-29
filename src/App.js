@@ -1,23 +1,34 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Header from "./components/Header";
+import Layout from "./components/Layout";
+import Footer from "./components/Footer";
+import layoutBg1 from "./assets/bg1.jpg";
+import layoutBg3 from "./assets/bg3.jpg";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello World, React.JS!</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header title="Pokemon Card Game" desc="Enjoy!" />
+      <Layout
+        id="FirstScreen"
+        title="New impression"
+        desc="TL;DR!"
+        urlBg={layoutBg1}
+      />
+      <Layout
+        id="SecondScreen"
+        title="New experience"
+        desc="You like it!"
+        colorBg="#f300b4"
+      />
+      <Layout
+        id="ThirdScreen"
+        title="New copabilities"
+        desc="Play now!"
+        urlBg={layoutBg3}
+      />
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
