@@ -1,0 +1,44 @@
+import { useState } from "react";
+import s from "./style.module.css";
+import cardBackSideJpg from "../../assets/card-back-side.jpg";
+const PokemonCard = ({ type, img, name, id, value }) => {
+  const [isActive, setActive] = useState(false);
+  const handleClick = () => {
+    setActive(!isActive);
+  };
+  return (
+    <div className={s.root} onClick={handleClick}>
+      <div className={`${s.pokemonCard} ${isActive ? s.active : ""}`}>
+        <div className={s.cardFront}>
+          <div className={`${s.wrap} ${s.front}`}>
+            <div className={`${s.pokemon} ${s[type]}`}>
+              <div className={s.values}>
+                <div className={`${s.count} ${s.top}`}>{value.top}</div>
+                <div className={`${s.count} ${s.right}`}>{value.right}</div>
+                <div className={`${s.count} ${s.bottom}`}>{value.bottom}</div>
+                <div className={`${s.count} ${s.left}`}>{value.left}</div>
+              </div>
+              <div className={s.imgContainer}>
+                <img src={img} alt={name} />
+              </div>
+              <div className={s.info}>
+                <span className={s.number}>{id}</span>
+                <h3 className={s.name}>{name}</h3>
+                <small className={s.type}>
+                  Type: <span>{type}</span>
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={s.cardBack}>
+          <div className={`${s.wrap} ${s.back}`}>
+            <img src={cardBackSideJpg} alt="Сard Backed" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default PokemonCard;

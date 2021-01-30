@@ -55,6 +55,8 @@
 
 .container {
   width: fit-content;
+  width: -moz-max-content;
+  width: -webkit-max-content;
   position: absolute;
   right: 0;
   top: 50%;
@@ -76,7 +78,6 @@
 
 .container h1 {
   font-size: 65px;
-  white-space: nowrap;
   font-weight: normal;
   font-style: italic;
   color: #fafafa;
